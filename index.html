@@ -17,19 +17,27 @@
       li.playing { color: #aaa; text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3); }
       li.playing a { color: #000; }
       li.playing:before { content: '♬'; width: 14px; height: 14px; padding: 3px; line-height: 14px; margin: 0px; position: absolute; left: -24px; top: 9px; color: #000; font-size: 13px; text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); }
-
+		ol, li	{
+			list-style:none;
+			text-align: center;
+			list-style-position: inside;
+		}
+		.f-l{
+			float:center;
+			clear: both;
+		}
       @media screen and (max-device-width: 480px) {
         #wrapper { position: relative; left: -3%; }
         #shortcuts { display: none; }
+         .column { width: 50%; }
       }
-
       img
 			  {
 					display: block;
 					margin-left: auto;
 					margin-right: auto;
 				}
-				#myButton {height: 300px;}
+				#myButton {height: 300px; }
     </style>
     <script src="audio.js_files/jquery.js"></script>
     <script src="audio.js_files/audio.js"></script>
@@ -79,23 +87,19 @@
         })
       });
     </script>
-
   </head>
   <body>
     <div id="wrapper">
-      <h1>🎵 🎶VHKTS Player🎵 🎶</h1>
+      <h1 align="center">🎵 🎶VHKTS Player🎵 🎶</h1>
       <div class="audiojs " classname="audiojs" id="audiojs_wrapper0"><audio preload="" src="audio.js_files/01-dead-wrong-intro.mp3"></audio>          <div class="play-pause">             <p class="play"></p>             <p class="pause"></p>             <p class="loading"></p>             <p class="error"></p>           </div>           <div class="scrubber">             <div class="progress" style="width: 0px;"></div>             <div class="loaded" style="width: 280px;"></div>           </div>           <div class="time">             <em class="played">00:00</em>/<strong class="duration">03:57</strong>           </div> <div class="error-message"></div></div>
+	  <h5><i>Keyboard shortcuts: </i></br><sharp>←/→ to change and Space to pause</sharp></h5>
 	  <div id='output'>
-      <ol>
-        <li class="playing"><a href="#" data-src="mp3s/dont_be_sad.mp3">dont be sad</a></li>
-        <li><a href="#" data-src="mp3s/get_some_rest.mp3">get some rest</a></li>
-      </ol>
-    </div>
-    <h5><i>click to change</i></h1>
-	<img id="myButton" src="images/2.jpg" />
+		<div class="row">
+		<div class="column">
+		<center><img id="myButton" src="images/2.jpg" /></center>
                             <script type="text/javascript">
             var images = ['images/3.jpg', 'images/4.jpg', 'images/5.jpg',
-            'images/6.jpg', 'images/7.jpg', 'images/8.jpg', 'images/9.jpg', 'images/10.jpg',
+            'images/7.jpg', 'images/8.jpg', 'images/9.jpg', 'images/10.jpg',
             'images/11.jpg', 'images/12.jpg', 'images/13.jpg', 'images/14.jpg', 'images/15.jpg',
             'images/16.jpg', 'images/17.jpg', 'images/18.jpg'],
 			i = 1;
@@ -107,7 +111,21 @@
                               this.src = images[i >= images.length - 1 ? i = 0 : ++i];
                                           }, false);
         </script>
-
-        <h5><i>Keyboard shortcuts: </i></br><sharp>←/→ to change and Space to pause</sharp></h5>
-
+		</div>
+			<div class="column">
+      <ol>
+        <li class="playing"><a href="#" data-src="mp3s/dont_be_sad.mp3">dont be sad</a></li>
+        <li><a href="#" data-src="mp3s/r1.mp3">rap 1</a></li>
+        <li><a href="#" data-src="mp3s/get_some_rest.mp3">get some rest</a></li>
+        <li><a href="#" data-src="mp3s/r2.mp3">rap 2</a></li>
+        <li><a href="#" data-src="mp3s/sleep.mp3">sleep</a></li>
+        <li><a href="#" data-src="mp3s/r3.mp3">rap 3</a></li>
+        <li><a href="#" data-src="mp3s/to_be_alone.mp3">to be alone</a></li>
+        <li><a href="#" data-src="mp3s/r4.mp3">rap 4</a></li>
+        <li><a href="#" data-src="mp3s/r5.mp3">rap 5</a></li>
+        <li><a href="#" data-src="mp3s/r6.mp3">rap 6</a></li>
+        <li><a href="#" data-src="mp3s/r7.mp3">rap 7</a></li>
+      </ol>
+    </div>
+	</div>
 </body></html>
